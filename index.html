@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<body>
+
+<h1>SELECTE ANY VALUE OF SELECT BOX</h1>
+
+<select name="selection" id="mySelect" style="width:500px;margin:50px 50px;">
+<option value="21" data-id="25" data-contact="7739261027">Treatment</option>
+<option value="21" data-id="23" data-contact="8739261027">Treatment1</option>
+<option value="21" data-id="31" data-contact="5739261027">Treatment2</option>
+<option value="21" data-id="14" data-contact="4739261027">Treatment3</option>
+</select>
+<script>
+   var selection = document.getElementById("mySelect");
+
+selection.onchange = function(event){
+  var rc = event.target.options[event.target.selectedIndex].dataset.id;
+  var clnc = event.target.options[event.target.selectedIndex].dataset.contact;
+  console.log("id: " + rc);
+  console.log("contact: " + clnc);
+};
+</script>
+</body>
+</html>
+
